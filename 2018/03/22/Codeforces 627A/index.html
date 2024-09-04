@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Codeforces 627A | lstkpeter</title><meta name="author" content="lstkpeter"><meta name="copyright" content="lstkpeter"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="A. XOR Equationtime limit per test2 secondsmemory limit per test256 megabytesinputstandard inputoutputstandard outputTwo positive integers a and b have a sum of s and a bitwise XOR of x. How many po">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces 627A">
+<meta property="og:url" content="https://lstkpeter.github.io/2018/03/22/Codeforces%20627A/index.html">
+<meta property="og:site_name" content="lstkpeter">
+<meta property="og:description" content="A. XOR Equationtime limit per test2 secondsmemory limit per test256 megabytesinputstandard inputoutputstandard outputTwo positive integers a and b have a sum of s and a bitwise XOR of x. How many po">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png">
+<meta property="article:published_time" content="2018-03-22T13:41:54.000Z">
+<meta property="article:modified_time" content="2021-08-09T01:59:03.601Z">
+<meta property="article:author" content="lstkpeter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png"><link rel="canonical" href="https://lstkpeter.github.io/2018/03/22/Codeforces%20627A/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Codeforces 627A',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-08-09 09:59:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">lstkpeter</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Codeforces 627A</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-03-22T13:41:54.000Z" title="发表于 2018-03-22 21:41:54">2018-03-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-09T01:59:03.601Z" title="更新于 2021-08-09 09:59:03">2021-08-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B0%B4%E9%A2%98/">水题</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">450</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Codeforces 627A"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
+
+<div class="header" style="margin:0px 0px 1em;padding:0px;text-align:center;color:rgb(34,34,34);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);"><div class="title" style="margin:0px 0px .5em;padding:0px;font-size:21px;">A. XOR Equation</div><div class="time-limit" style="margin:0px auto;padding:0px;"><div class="property-title" style="margin:0px;padding:0px 4px 0px 0px;">time limit per test</div>2 seconds</div><div class="memory-limit" style="margin:0px auto;padding:0px;"><div class="property-title" style="margin:0px;padding:0px 4px 0px 0px;">memory limit per test</div>256 megabytes</div><div class="input-file" style="margin:0px auto;padding:0px;"><div class="property-title" style="margin:0px;padding:0px 4px 0px 0px;">input</div>standard input</div><div class="output-file" style="margin:0px auto;padding:0px;"><div class="property-title" style="margin:0px;padding:0px 4px 0px 0px;">output</div>standard output</div></div><div style="margin:0px;padding:0px;color:rgb(34,34,34);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);"><p style="font-size:1em;line-height:1.4em;margin-bottom:1em;">Two <span class="tex-font-style-bf" style="font-weight:bold;">positive</span> integers <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>a</em></span> and <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>b</em></span> have a sum of <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>s</em></span> and a bitwise XOR of <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>x</em></span>. How many possible values are there for the ordered pair <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(<em>a</em>, <em>b</em>)</span>?</p></div><div class="input-specification" style="margin:0px;padding:0px;color:rgb(34,34,34);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);"><div class="section-title" style="margin:0px;padding:0px;font-size:16.1px;font-weight:bold;">Input</div><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">The first line of the input contains two integers <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>s</em></span> and <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;"><em>x</em></span> (<span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">2 ≤ <em>s</em> ≤ 10<span class="upper-index" style="font-size:13.125px;line-height:0;vertical-align:baseline;">12</span></span>, <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">0 ≤ <em>x</em> ≤ 10<span class="upper-index" style="font-size:13.125px;line-height:0;vertical-align:baseline;">12</span></span>), the sum and bitwise xor of the pair of positive integers, respectively.</p></div><div class="output-specification" style="margin:0px 0px 1em;padding:0px;color:rgb(34,34,34);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);"><div class="section-title" style="margin:0px;padding:0px;font-size:16.1px;font-weight:bold;">Output</div><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">Print a single integer, the number of solutions to the given conditions. If no solutions exist, print <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">0</span>.</p></div><div class="sample-tests" style="margin:0px;padding:0px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;font-size:.9em;color:rgb(34,34,34);background-color:rgb(255,255,255);"><div class="section-title" style="margin:0px;padding:0px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14.49px;font-weight:bold;">Examples</div><div class="sample-test" style="margin:0px;padding:0px;"><div class="input" style="margin:0px;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">input<div title="Copy" class="input-copier" style="margin:1px;padding:3px;float:right;border:1px solid rgb(185,185,185);text-transform:none;color:rgb(136,136,136);">Copy</div></div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">9 5
+</pre></div><div class="output" style="margin:0px 0px 1em;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">output</div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">4
+</pre></div><div class="input" style="margin:0px;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">input<div title="Copy" class="input-copier" style="margin:1px;padding:3px;float:right;border:1px solid rgb(185,185,185);text-transform:none;color:rgb(136,136,136);">Copy</div></div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">3 3
+</pre></div><div class="output" style="margin:0px 0px 1em;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">output</div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">2
+</pre></div><div class="input" style="margin:0px;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">input<div title="Copy" class="input-copier" style="margin:1px;padding:3px;float:right;border:1px solid rgb(185,185,185);text-transform:none;color:rgb(136,136,136);">Copy</div></div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">5 2
+</pre></div><div class="output" style="margin:0px 0px 1em;padding:0px;border:1px solid rgb(136,136,136);"><div class="title" style="margin:0px;padding:.25em;font-size:1.3em;border-bottom:1px solid rgb(136,136,136);text-transform:lowercase;font-weight:bold;">output</div><pre style="margin-bottom:0px;padding:.25em;font-size:12.6px;font-family:Consolas, 'Lucida Console', 'Andale Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier;line-height:1.25em;white-space:pre-wrap;color:rgb(136,0,0);background-color:rgb(239,239,239);">0
+</pre></div></div></div><div class="note" style="margin:0px;padding:0px;color:rgb(34,34,34);font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;background-color:rgb(255,255,255);"><div class="section-title" style="margin:0px;padding:0px;font-size:16.1px;font-weight:bold;">Note</div><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">In the first sample, we have the following solutions: <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(2, 7)</span>, <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(3, 6)</span>, <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(6, 3)</span>, <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(7, 2)</span>.</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">In the second sample, the only solutions are <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(1, 2)</span> and <span class="tex-span" style="font-size:17.5px;font-family:'times new roman', sans-serif;white-space:nowrap;">(2, 1)</span>.</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">s=a+b  x=a xor b</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">a+b=2*(a&amp;b)+a xor b</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">想了半天，ppl说我能确定s-x是进位</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">想了一下，异或是半加法，没有进位，全加减半加，那么剩下的就是进位了。</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">异或为0的位，应该是全0或者全1，不用考虑</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">异或为1的位，应该是1 xor 0 或者 0 xor 1 。所以只要书异或中为1的位有多少就行了。</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">特判比较容易漏掉：s&lt;x为0 ，全加法不可能小于半加法； s-x为奇数，或者是说最后一位为1，是不可能的，因为s-x的最后一位没有意义，倒数第二位才是最后一位相加的进位。xor为1，进位也为1，即AND为1，也是不可能的。</p><p style="margin-top:1.5em;margin-bottom:0px;font-size:1em;line-height:1.4em;">最后，如果s==x 或出现0的情况，答案减2</p><pre class="cpp">#include &lt;iostream&gt;
+
+<p>using namespace std;</p>
+<p>int main()<br>{<br>    long long s,x,t,a,ans&#x3D;1;<br>    cin&gt;&gt;s&gt;&gt;x;<br>    t&#x3D;x;<br>    a&#x3D;s-x;<br>    a&gt;&gt;&#x3D;1;<br>    if(s&lt;x || (s-x)%2&#x3D;&#x3D;1)<br>        cout&lt;&lt;0&lt;&lt;endl;<br>    else<br>    {<br>        while(x!&#x3D;0)<br>        {<br>            if(x&amp;1)<br>                ans*&#x3D;2;<br>            if(x&amp;1 &amp;&amp; a&amp;1)<br>            {<br>                ans&#x3D;0;<br>                break;<br>            }<br>            x&gt;&gt;&#x3D;1;<br>            a&gt;&gt;&#x3D;1;<br>        }<br>        if(s&#x3D;&#x3D;t) ans-&#x3D;2;<br>        cout&lt;&lt;ans&lt;&lt;endl;<br>    }</p>
+<pre><code>return 0;
+</code></pre>
+<p>}<br></pre><br /></div></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lstkpeter</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lstkpeter.github.io/2018/03/22/Codeforces%20627A/">https://lstkpeter.github.io/2018/03/22/Codeforces%20627A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lstkpeter.github.io" target="_blank">lstkpeter</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2018/03/25/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">软件测试第三次作业</div></div></a></div><div class="next-post pull-right"><a href="/2018/03/22/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%20%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E9%AA%8C/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">软件测试 第一次实验</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lstkpeter</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lstkpeter"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lstkpeter" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lstkpeter@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">---</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排序复习"/></a><div class="content"><a class="title" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习">排序复习</a><time datetime="2021-08-18T02:53:25.000Z" title="发表于 2021-08-18 10:53:25">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"/></a><div class="content"><a class="title" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda">以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda</a><time datetime="2019-12-16T11:10:48.000Z" title="发表于 2019-12-16 19:10:48">2019-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决递归函数需要返回值时的蛋疼问题"/></a><div class="content"><a class="title" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题">解决递归函数需要返回值时的蛋疼问题</a><time datetime="2019-10-22T10:47:55.000Z" title="发表于 2019-10-22 18:47:55">2019-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="POJ 1556 (toj 1952)The Doors"/></a><div class="content"><a class="title" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors">POJ 1556 (toj 1952)The Doors</a><time datetime="2019-07-30T07:58:38.000Z" title="发表于 2019-07-30 15:58:38">2019-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 多校3  Fansblog"/></a><div class="content"><a class="title" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog">2019 多校3  Fansblog</a><time datetime="2019-07-30T07:56:47.000Z" title="发表于 2019-07-30 15:56:47">2019-07-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By lstkpeter</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>计算几何POJ 2826 接水WA哭 | lstkpeter</title><meta name="keywords" content="计算几何 poj"><meta name="author" content="lstkpeter"><meta name="copyright" content="lstkpeter"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="An Easy Problem?!     Time Limit:&amp;nbsp;1000MS &amp;nbsp; Memory Limit:&amp;nbsp;65536K   Total Submissions:&amp;nbsp;12375 &amp;nbsp; Accepted:&amp;nbsp;1897     Description It&#39;s raining outside. Farmer Johnson&#39;s bul">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算几何POJ 2826 接水WA哭">
+<meta property="og:url" content="https://lstkpeter.github.io/2016/08/08/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95POJ%202826%20%E6%8E%A5%E6%B0%B4WA%E5%93%AD/index.html">
+<meta property="og:site_name" content="lstkpeter">
+<meta property="og:description" content="An Easy Problem?!     Time Limit:&amp;nbsp;1000MS &amp;nbsp; Memory Limit:&amp;nbsp;65536K   Total Submissions:&amp;nbsp;12375 &amp;nbsp; Accepted:&amp;nbsp;1897     Description It&#39;s raining outside. Farmer Johnson&#39;s bul">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png">
+<meta property="article:published_time" content="2016-08-08T09:51:31.000Z">
+<meta property="article:modified_time" content="2021-08-09T02:11:43.456Z">
+<meta property="article:author" content="lstkpeter">
+<meta property="article:tag" content="计算几何 poj">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png"><link rel="canonical" href="https://lstkpeter.github.io/2016/08/08/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95POJ%202826%20%E6%8E%A5%E6%B0%B4WA%E5%93%AD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算几何POJ 2826 接水WA哭',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-08-09 10:11:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">lstkpeter</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算几何POJ 2826 接水WA哭</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2016-08-08T09:51:31.000Z" title="发表于 2016-08-08 17:51:31">2016-08-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-09T02:11:43.456Z" title="更新于 2021-08-09 10:11:43">2021-08-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算几何POJ 2826 接水WA哭"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
+
+
+<div class="ptt" lang="en-US" style="text-align:center; font-size:18pt; font-weight:bold; color:blue">
+An Easy Problem?!</div>
+<div class="plm" style="text-align:center; font-size:14px">
+<table align="center">
+<tbody>
+<tr>
+<td><strong>Time Limit:</strong>&nbsp;1000MS</td>
+<td width="10px">&nbsp;</td>
+<td><strong>Memory Limit:</strong>&nbsp;65536K</td>
+</tr>
+<tr>
+<td><strong>Total Submissions:</strong>&nbsp;12375</td>
+<td width="10px">&nbsp;</td>
+<td><strong>Accepted:</strong>&nbsp;1897</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Description</p>
+<span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">It's raining outside. Farmer Johnson's bull Ben wants some rain to water his flowers. Ben nails two wooden boards on the wall of his barn. Shown in the pictures below, the two boards on
+ the wall just look like two segments on the plane, as they have the same width.&nbsp;</span><br style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px">
+<center style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:16px"><img src="http://poj.org/images/2826_1.gif" alt=""></center>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+<br>
+Your mission is to calculate how much rain these two boards can collect.&nbsp;<br>
+</div>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Input</p>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+The first line contains the number of test cases.&nbsp;<br>
+Each test case consists of 8 integers not exceeding 10,000 by absolute value,&nbsp;<em>x</em><sub>1</sub>,&nbsp;<em>y</em><sub>1</sub>,&nbsp;<em>x</em><sub>2</sub>,&nbsp;<em>y</em><sub>2</sub>,&nbsp;<em>x</em><sub>3</sub>,&nbsp;<em>y</em><sub>3</sub>,&nbsp;<em>x</em><sub>4</sub>,&nbsp;<em>y</em><sub>4</sub>.
+ (<em>x</em><sub>1</sub>,&nbsp;<em>y</em><sub>1</sub>), (<em>x</em><sub>2</sub>,&nbsp;<em>y</em><sub>2</sub>) are the endpoints of one board, and (<em>x</em><sub>3</sub>,&nbsp;<em>y</em><sub>3</sub>), (<em>x</em><sub>4</sub>,&nbsp;<em>y</em><sub>4</sub>) are the endpoints of the
+ other one.&nbsp;<br>
+</div>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Output</p>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+For each test case output a single line containing a real number with precision up to two decimal places - the amount of rain collected.&nbsp;<br>
+</div>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Sample Input</p>
+<pre class="sio" style="font-family:&quot;Courier New&quot;,Courier,monospace; font-size:14px">2
+0 1 1 0
+1 0 2 1
+
+<p>0 1 2 1<br>1 0 1 2<br></pre></p>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Sample Output</p>
+<pre class="sio" style="font-family:&quot;Courier New&quot;,Courier,monospace; font-size:14px">1.00
+0.00
+</pre>
+<p class="pst" style="font-size:18pt; font-weight:bold; color:blue">Source</p>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+<a target="_blank" target="_blank" href="http://poj.org/searchproblem?field=source&amp;key=POJ&#43;Monthly--2006.04.28" style="text-decoration:none">POJ Monthly--2006.04.28</a>, Dagger@PKU_RPWT</div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+<br>
+</div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+水题，考虑特殊情况：</div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+1.<span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">两条线没有交点，结果为0</span></div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+2.<span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">一个板子与x轴平行结果为0</span></div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+3.<span style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">两条线斜率同号，并且上面的那个板子能盖住下面的板子接不到水，结果为0</span></div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+此题较坑的地方，导致自己被WA哭，其实至今也没找到原因，在POJ上的discuss上看到结果加一个eps会蜜汁过题，就加了一下结果真的过了。。。仔细考虑可能是会输出-0.00的原因吧</div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+附AC代码</div>
+<div class="ptx" lang="en-US" style="font-family:&quot;Times New Roman&quot;,Times,serif; font-size:14px">
+<pre name="code" class="cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+#include &lt;iomanip&gt;
+
+<p>using namespace std;</p>
+<p>const double eps&#x3D;1e-6;</p>
+<p>struct point<br>{<br>    double x,y;</p>
+<p>};<br>typedef point vec;</p>
+<p>struct line<br>{<br>    point a,b;<br>};</p>
+<p>vec operator -(point m,point n)<br>{<br>    vec c;<br>    c.x&#x3D;m.x-n.x;<br>    c.y&#x3D;m.y-n.y;<br>    return c;<br>}</p>
+<p>vec operator +(point m,point n)<br>{<br>    vec c;<br>    c.x&#x3D;m.x+n.x;<br>    c.y&#x3D;m.y+n.y;<br>    return c;<br>}</p>
+<p>vec operator * (vec c,int t)<br>{<br>    vec m;<br>    m.x&#x3D;c.x<em>t;<br>    m.y&#x3D;c.y</em>t;<br>    return m;<br>}<br>double operator &#x2F;(vec m, vec n)<br>{<br>    return m.x<em>n.y-m.y</em>n.x;<br>}</p>
+<p>int cross(line m,line n)<br>{<br>    if(((n.a-m.a)&#x2F;(m.b-m.a))<em>((n.b-m.a)&#x2F;(m.b-m.a))&lt;&#x3D;0<br>       &amp;&amp; ((m.a-n.a)&#x2F;(n.b-n.a))</em>((m.b-n.a)&#x2F;(n.b-n.a))&lt;&#x3D;0)<br>        return 1;<br>    else return 0;<br>}</p>
+<p>point maxpoint(line m)<br>{<br>    if(m.a.y&gt;m.b.y)<br>        return m.a;<br>    else return m.b;<br>}</p>
+<p>int pallx(line m)<br>{<br>    if(m.b.y-m.a.y&#x3D;&#x3D;0)<br>        return 0;<br>    else return 1;<br>}</p>
+<p>double dis(point a,point b)<br>{<br>    return sqrt((a.x-b.x)<em>(a.x-b.x)+(a.y-b.y)</em>(a.y-b.y));<br>}</p>
+<p>double sq(point a,point b,point c)<br>{<br>    double x&#x3D;dis(a,b),y&#x3D;dis(b,c),z&#x3D;dis(c,a);<br>    double p&#x3D;0.5*(x+y+z);<br>    double s&#x3D;sqrt(p*(p-x)<em>(p-y)</em>(p-z));<br>    return s;<br>}</p>
+<p>point jiaop(line m,line n)<br>{<br>    point o;<br>    double t&#x3D;fabs((n.a-m.a)&#x2F;(n.b-m.a))&#x2F;fabs((m.b-m.a)&#x2F;(n.b-n.a));<br>    o&#x3D;m.a;<br>    o.x+&#x3D;(m.b.x-m.a.x)*t;<br>    o.y+&#x3D;(m.b.y-m.a.y)*t;<br>    return o;<br>}</p>
+<p>int main()<br>{<br>    int t;<br>    cin&gt;&gt;t;<br>    line m,n;<br>    while(t–)<br>    {<br>        cin&gt;&gt;m.a.x&gt;&gt;m.a.y&gt;&gt;m.b.x&gt;&gt;m.b.y;<br>        cin&gt;&gt;n.a.x&gt;&gt;n.a.y&gt;&gt;n.b.x&gt;&gt;n.b.y;<br>        double k1&#x3D;(m.b.y-m.a.y)&#x2F;(m.b.x-m.a.x),k2&#x3D;(n.b.y-n.a.y)&#x2F;(n.b.x-n.a.x);<br>        if(pallx(m)&#x3D;&#x3D;0 || pallx(n)&#x3D;&#x3D;0)<br>        {<br>            cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>            continue;<br>        }<br>        else if(cross(m,n)&#x3D;&#x3D;0)<br>        {<br>            cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>            continue;<br>        }<br>        else if(k1&#x3D;&#x3D;k2)<br>        {<br>            cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>            continue;<br>        }<br>        if(k1<em>k2&gt;0)<br>        {<br>            if(k1&gt;0)<br>            {<br>                if(k1&gt;k2)<br>                {<br>                    if(max(m.a.x,m.b.x)&gt;&#x3D;max(n.a.x,n.b.x))<br>                    {<br>                        cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>                        continue;<br>                    }<br>                }<br>                else<br>                {<br>                    if(max(n.a.x,n.b.x)&gt;&#x3D;max(m.a.x,m.b.x))<br>                    {<br>                        cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>                        continue;<br>                    }<br>                }<br>            }<br>            else<br>            {<br>                if(k1&lt;k2)<br>                {<br>                    if(min(m.a.x,m.b.x)&lt;&#x3D;min(n.a.x,n.b.x))<br>                    {<br>                        cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>                        continue;<br>                    }<br>                }<br>                else<br>                {<br>                    if(min(n.a.x,n.b.x)&lt;&#x3D;min(m.a.x,m.b.x))<br>                    {<br>                        cout&lt;&lt;&quot;0.00&quot;&lt;&lt;endl;<br>                        continue;<br>                    }<br>                }<br>            }<br>        }<br>            int flag&#x3D;0;<br>            double s,y;<br>            point a,b;<br>            a&#x3D;maxpoint(m);<br>            b&#x3D;maxpoint(n);<br>            if(a.y&gt;&#x3D;b.y)<br>            {<br>                flag&#x3D;1;<br>                y&#x3D;b.y;<br>                a&#x3D;b;<br>            }<br>            else<br>            {<br>                y&#x3D;a.y;<br>            }<br>            if(b.y&#x3D;&#x3D;y)<br>                a&#x3D;b;<br>            b.y&#x3D;y;<br>            if(flag&#x3D;&#x3D;1)<br>            {<br>                point i&#x3D;m.a,j&#x3D;m.b;<br>                if(m.b.y&gt;m.a.y)<br>                {<br>                    j&#x3D;m.a;<br>                    i&#x3D;m.b;<br>                }<br>                double x3&#x3D;i.x,x4&#x3D;j.x,y3&#x3D;i.y,y4&#x3D;j.y,y2&#x3D;y;<br>                b.x&#x3D;(x4</em>y3-y2<em>x4+x3</em>y2-x3<em>y4)&#x2F;(y3-y4);<br>            }<br>            else<br>            {<br>                point i&#x3D;n.a,j&#x3D;n.b;<br>                if(n.b.y&gt;n.a.y)<br>                {<br>                    j&#x3D;n.a;<br>                    i&#x3D;n.b;<br>                }<br>                double x3&#x3D;i.x,x4&#x3D;j.x,y3&#x3D;i.y,y4&#x3D;j.y,y2&#x3D;y;<br>                b.x&#x3D;(x4</em>y3-y2<em>x4+x3</em>y2-x3*y4)&#x2F;(y3-y4);<br>            }<br>            point c&#x3D;jiaop(m,n);<br>            cout&lt;&lt;fixed&lt;&lt;setprecision(2)&lt;&lt;sq(a,b,c)+eps&lt;&lt;endl;<br>    }<br>    return 0;<br>}<br></pre><br><br><br></p>
+</div>
+<br>
+<span style="font-size:14px; color:#333399; font-family:Simsun; font-size:14px"></span></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lstkpeter</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lstkpeter.github.io/2016/08/08/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95POJ%202826%20%E6%8E%A5%E6%B0%B4WA%E5%93%AD/">https://lstkpeter.github.io/2016/08/08/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95POJ%202826%20%E6%8E%A5%E6%B0%B4WA%E5%93%AD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lstkpeter.github.io" target="_blank">lstkpeter</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95-poj/">计算几何 poj</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2016/08/09/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%20POJ%202533/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">最长上升子序列 POJ 2533</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lstkpeter</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lstkpeter"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lstkpeter" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lstkpeter@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">---</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排序复习"/></a><div class="content"><a class="title" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习">排序复习</a><time datetime="2021-08-18T02:53:25.000Z" title="发表于 2021-08-18 10:53:25">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"/></a><div class="content"><a class="title" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda">以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda</a><time datetime="2019-12-16T11:10:48.000Z" title="发表于 2019-12-16 19:10:48">2019-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决递归函数需要返回值时的蛋疼问题"/></a><div class="content"><a class="title" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题">解决递归函数需要返回值时的蛋疼问题</a><time datetime="2019-10-22T10:47:55.000Z" title="发表于 2019-10-22 18:47:55">2019-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="POJ 1556 (toj 1952)The Doors"/></a><div class="content"><a class="title" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors">POJ 1556 (toj 1952)The Doors</a><time datetime="2019-07-30T07:58:38.000Z" title="发表于 2019-07-30 15:58:38">2019-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 多校3  Fansblog"/></a><div class="content"><a class="title" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog">2019 多校3  Fansblog</a><time datetime="2019-07-30T07:56:47.000Z" title="发表于 2019-07-30 15:56:47">2019-07-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By lstkpeter</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

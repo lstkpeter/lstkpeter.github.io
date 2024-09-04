@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>最长上升子序列 POJ 2533 | lstkpeter</title><meta name="keywords" content="poj 动态规划"><meta name="author" content="lstkpeter"><meta name="copyright" content="lstkpeter"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Longest Ordered Subsequence   Time Limit: 2000MS                          Memory Limit: 65536K         Total Submissions: 47004                          Accepted: 20885           Description  A nume">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最长上升子序列 POJ 2533">
+<meta property="og:url" content="https://lstkpeter.github.io/2016/08/09/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%20POJ%202533/index.html">
+<meta property="og:site_name" content="lstkpeter">
+<meta property="og:description" content="Longest Ordered Subsequence   Time Limit: 2000MS                          Memory Limit: 65536K         Total Submissions: 47004                          Accepted: 20885           Description  A nume">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png">
+<meta property="article:published_time" content="2016-08-09T03:08:28.000Z">
+<meta property="article:modified_time" content="2021-08-09T01:59:03.601Z">
+<meta property="article:author" content="lstkpeter">
+<meta property="article:tag" content="poj 动态规划">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png"><link rel="canonical" href="https://lstkpeter.github.io/2016/08/09/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%20POJ%202533/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '最长上升子序列 POJ 2533',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-08-09 09:59:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">lstkpeter</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">最长上升子序列 POJ 2533</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2016-08-09T03:08:28.000Z" title="发表于 2016-08-09 11:08:28">2016-08-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-09T01:59:03.601Z" title="更新于 2021-08-09 09:59:03">2021-08-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">577</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="最长上升子序列 POJ 2533"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
+
+<div style="text-align:center;">Longest Ordered Subsequence</div>
+
+<div style="text-align:center;">
+<table align="center"><tbody><tr><td><strong>Time Limit:</strong> 2000MS</td>
+            <td></td>
+            <td><strong>Memory Limit:</strong> 65536K</td>
+        </tr><tr><td><strong>Total Submissions:</strong> 47004</td>
+            <td></td>
+            <td><strong>Accepted:</strong> 20885</td>
+        </tr></tbody></table></div>
+
+<p>Description</p>
+
+<div>A numeric sequence of <em>ai</em> is ordered if <em>a1</em> &lt; <em>a2</em> &lt; ... &lt; <em>aN</em>. Let the subsequence of the given numeric sequence (<em>a1</em>, <em>a2</em>, ..., <em>aN</em>) be any sequence (<em>ai1</em>, <em>ai2</em>, ..., <em>aiK</em>), where 1 &lt;= <em>i1</em> &lt; <em>i2</em> &lt; ... &lt; <em>iK</em> &lt;= <em>N</em>. For example, sequence (1, 7, 3, 5, 9, 4, 8) has ordered subsequences, e. g., (1, 7), (3, 4, 8) and many others. All longest ordered subsequences are of length 4, e. g., (1, 3, 5, 8).<br /><br />
+Your program, when given the numeric sequence, must find the length of its longest ordered subsequence.</div>
+
+<p>Input</p>
+
+<div>The first line of input file contains the length of sequence N. The second line contains the elements of sequence - N integers in the range from 0 to 10000 each, separated by spaces. 1 &lt;= N &lt;= 1000</div>
+
+<p>Output</p>
+
+<div>Output file must contain a single integer - the length of the longest ordered subsequence of the given sequence.</div>
+
+<p>Sample Input</p>
+
+<pre class="has">
+<code class="language-sio">7
+1 7 3 5 9 4 8</code></pre>
+
+<p>Sample Output</p>
+
+<pre class="has">
+<code class="language-sio">4
+</code></pre>
+
+<p>Source</p>
+
+<div><a target="_blank" rel="noopener" href="http://poj.org/searchproblem?field=source&amp;key=Northeastern+Europe+2002">Northeastern Europe 2002</a>, Far-Eastern Subregion</div>
+
+<div></div>
+
+<div>最长上升子序列：</div>
+
+<div>O(n2)复杂度</div>
+
+<div>dp[i]表示以第i个未知的数作为子序列中最后一个元素时，能够构成的子序列的最大长度。</div>
+
+<div>在i时，考虑i前面的所有区间最长上升子序列</div>
+
+<div>转移方程：dp[i]=max(dp[i],dp[j]+1)</div>
+
+<div>
+<pre class="has">
+<code class="language-cpp">#include &lt;iostream&gt;
+
+<p>using namespace std;</p>
+<p>int main()<br>&#123;<br>    int n;<br>    cin&gt;&gt;n;<br>    int i,j,a[n],b[n],m&#x3D;0;<br>    for(i&#x3D;0;i&lt;n;i++)<br>        cin&gt;&gt;a[i];<br>    b[0]&#x3D;1;<br>    for(i&#x3D;1;i&lt;n;i++)<br>    &#123;<br>        b[i]&#x3D;1;<br>        for(j&#x3D;0;j&lt;i;j++)<br>        &#123;<br>            if(a[i]&gt;a[j] &amp;&amp; b[j]+1&gt;b[i])<br>                b[i]&#x3D;b[j]+1;<br>        &#125;<br>    &#125;<br>    for(i&#x3D;0;i&lt;n;i++)<br>    &#123;<br>        if(b[i]&gt;m)<br>            m&#x3D;b[i];<br>    &#125;<br>    cout&lt;&lt;m&lt;&lt;endl;<br>    return 0;<br>&#125;<br></code></pre><br>O(nlogn)</div></p>
+<div>dp[i]表示，上升子序列长度为i时，序列的最后一个数字。利用二分去搜索，每一次去找dp[ ]值最大中最小的数，也就是刚好比a[i]大的那个数，这时候这个数字可以被a[i]替， 二分会降到O(nlogn)</div>
+
+<div>
+<pre class="has">
+<code class="language-cpp">&lt;pre name="code" class="cpp"&gt;#include &lt;iostream&gt;
+
+<p>using namespace std;</p>
+<p>int dp[10001];<br>int main()<br>&#123;<br>    int n;<br>    cin&gt;&gt;n;<br>    dp[0]&#x3D;0;<br>    int tail&#x3D;0,a;<br>    for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>    &#123;<br>        cin&gt;&gt;a;<br>        &#x2F;&#x2F;二分<br>        int low&#x3D;0,high&#x3D;tail-1;<br>        while(low&lt;&#x3D;high)<br>        &#123;<br>            int mid&#x3D;(low+high)&#x2F;2;<br>            if(dp[mid]&gt;&#x3D;a)<br>                high&#x3D;mid-1;<br>            else low&#x3D;mid+1;<br>        &#125;<br>        if(low&gt;&#x3D;tail)<br>            tail++;<br>        dp[low]&#x3D;a;<br>    &#125;<br>    cout&lt;&lt;tail&lt;&lt;endl;<br>    return 0;<br>&#125;<br></code></pre></p>
+<pre>
+</pre>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lstkpeter</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lstkpeter.github.io/2016/08/09/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%20POJ%202533/">https://lstkpeter.github.io/2016/08/09/%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97%20POJ%202533/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lstkpeter.github.io" target="_blank">lstkpeter</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/poj-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">poj 动态规划</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/01/06/%E4%BD%BF%E7%94%A8SoftEther%E5%88%A9%E7%94%A8vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%88ipv6%E5%8F%AF%E7%94%A8%EF%BC%89/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用SoftEther利用vps服务器搭建（ipv6可用）</div></div></a></div><div class="next-post pull-right"><a href="/2016/08/08/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95POJ%202826%20%E6%8E%A5%E6%B0%B4WA%E5%93%AD/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算几何POJ 2826 接水WA哭</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lstkpeter</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lstkpeter"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lstkpeter" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lstkpeter@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">---</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排序复习"/></a><div class="content"><a class="title" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习">排序复习</a><time datetime="2021-08-18T02:53:25.000Z" title="发表于 2021-08-18 10:53:25">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"/></a><div class="content"><a class="title" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda">以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda</a><time datetime="2019-12-16T11:10:48.000Z" title="发表于 2019-12-16 19:10:48">2019-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决递归函数需要返回值时的蛋疼问题"/></a><div class="content"><a class="title" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题">解决递归函数需要返回值时的蛋疼问题</a><time datetime="2019-10-22T10:47:55.000Z" title="发表于 2019-10-22 18:47:55">2019-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="POJ 1556 (toj 1952)The Doors"/></a><div class="content"><a class="title" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors">POJ 1556 (toj 1952)The Doors</a><time datetime="2019-07-30T07:58:38.000Z" title="发表于 2019-07-30 15:58:38">2019-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 多校3  Fansblog"/></a><div class="content"><a class="title" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog">2019 多校3  Fansblog</a><time datetime="2019-07-30T07:56:47.000Z" title="发表于 2019-07-30 15:56:47">2019-07-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By lstkpeter</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

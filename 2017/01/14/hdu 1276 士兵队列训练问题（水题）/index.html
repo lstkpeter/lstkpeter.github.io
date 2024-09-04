@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>hdu 1276 士兵队列训练问题（水题） | lstkpeter</title><meta name="author" content="lstkpeter"><meta name="copyright" content="lstkpeter"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="士兵队列训练问题 Time Limit: 2000&#x2F;1000 MS (Java&#x2F;Others)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Memory Limit: 65536&#x2F;32768 K (Java&#x2F;Others) Total Submission(s): 7307&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Accepted Submission(s): 3332    Pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hdu 1276 士兵队列训练问题（水题）">
+<meta property="og:url" content="https://lstkpeter.github.io/2017/01/14/hdu%201276%20%E5%A3%AB%E5%85%B5%E9%98%9F%E5%88%97%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%EF%BC%88%E6%B0%B4%E9%A2%98%EF%BC%89/index.html">
+<meta property="og:site_name" content="lstkpeter">
+<meta property="og:description" content="士兵队列训练问题 Time Limit: 2000&#x2F;1000 MS (Java&#x2F;Others)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Memory Limit: 65536&#x2F;32768 K (Java&#x2F;Others) Total Submission(s): 7307&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Accepted Submission(s): 3332    Pr">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png">
+<meta property="article:published_time" content="2017-01-14T06:40:47.000Z">
+<meta property="article:modified_time" content="2021-08-09T01:59:03.601Z">
+<meta property="article:author" content="lstkpeter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png"><link rel="canonical" href="https://lstkpeter.github.io/2017/01/14/hdu%201276%20%E5%A3%AB%E5%85%B5%E9%98%9F%E5%88%97%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%EF%BC%88%E6%B0%B4%E9%A2%98%EF%BC%89/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'hdu 1276 士兵队列训练问题（水题）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-09 09:59:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">lstkpeter</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">hdu 1276 士兵队列训练问题（水题）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-01-14T06:40:47.000Z" title="发表于 2017-01-14 14:40:47">2017-01-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-09T01:59:03.601Z" title="更新于 2021-08-09 09:59:03">2021-08-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B0%B4%E9%A2%98/">水题</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">680</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="hdu 1276 士兵队列训练问题（水题）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><span id="more"></span>
+
+
+<h1 style="color:rgb(26,92,200); text-align:center; font-family:&quot;Times New Roman&quot;">
+士兵队列训练问题</h1>
+<span style="font-family:&quot;Times New Roman&quot;; font-size:14px"><strong><span style="font-family:Arial; font-size:12px; color:green">Time Limit: 2000/1000 MS (Java/Others)&nbsp;&nbsp;&nbsp;&nbsp;Memory Limit: 65536/32768 K (Java/Others)<br>
+Total Submission(s): 7307&nbsp;&nbsp;&nbsp;&nbsp;Accepted Submission(s): 3332<br>
+</span></strong></span><br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Problem Description</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+某部队进行新兵队列训练，将新兵从一开始按顺序依次编号，并排成一行横队，训练的规则如下：从头开始一至二报数，凡报到二的出列，剩下的向小序号方向靠拢，再从头开始进行一至三报数，凡报到三的出列，剩下的向小序号方向靠拢，继续从头开始进行一至二报数。。。，以后从头开始轮流进行一至二报数、一至三报数直到剩下的人数不超过三人为止。<br>
+</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Input</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+本题有多个测试数据组，第一行为组数N，接着为N行新兵人数，新兵人数不超过5000。<br>
+</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Output</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+共有N行，分别对应输入的新兵人数，每行输出剩下的新兵最初的编号，编号之间有一个空&#26684;。<br>
+</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Sample Input</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+<pre style="word-wrap:break-word; white-space:pre-wrap; margin-top:0px; margin-bottom:0px"><div style="font-family:&quot;Courier New&quot;,Courier,monospace">2
+20
+40</div></pre>
+</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Sample Output</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+<pre style="word-wrap:break-word; white-space:pre-wrap; margin-top:0px; margin-bottom:0px"><div style="font-family:&quot;Courier New&quot;,Courier,monospace">1 7 19
+1 19 37</div></pre>
+</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Author</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+Cai Minglun</div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Source</div>
+<div class="panel_content" style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/search.php?field=problem&amp;key=%BA%BC%B5%E7ACM%BC%AF%D1%B5%B6%D3%D1%B5%C1%B7%C8%FC%A3%A8VI%A3%A9&amp;source=1&amp;searchmode=source" style="color:rgb(26,92,200); text-decoration:none">杭电ACM集训队训练赛（VI）</a></div>
+<div class="panel_bottom" style="height:auto; margin:0px; font-family:&quot;Times New Roman&quot;; font-size:14px">
+&nbsp;</div>
+<br style="font-family:&quot;Times New Roman&quot;; font-size:14px">
+<div class="panel_title" align="left" style="height:38px; padding:0px 14px; color:rgb(124,169,237); font-size:18px; font-family:Arial; font-weight:bold">
+Recommend</div>
+<p style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+lcy&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;We have carefully selected several similar problems for you:&nbsp;&nbsp;<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1282" style="color:rgb(26,92,200); text-decoration:none">1282</a>&nbsp;<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1279" style="color:rgb(26,92,200); text-decoration:none">1279</a>&nbsp;<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1274" style="color:rgb(26,92,200); text-decoration:none">1274</a>&nbsp;<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1201" style="color:rgb(26,92,200); text-decoration:none">1201</a>&nbsp;<a target="_blank" target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1237" style="color:rgb(26,92,200); text-decoration:none">1237</a>&nbsp;</p>
+<p style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+<br>
+</p>
+<p style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+用模拟瞎写的，讲道理应该用队列或者栈来写。。。注意特判，否则会WA</p>
+<p style="height:auto; margin:0px; padding:0px 20px; font-size:14px; font-family:&quot;Times New Roman&quot;">
+</p>
+<pre name="code" class="cpp">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+using namespace std;
+
+<p>int a[5050];<br>int re(int n)<br>{<br>    int k&#x3D;0;<br>    for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>        if(a[i]!&#x3D;0) k++;<br>    return k;<br>}<br>int main()<br>{<br>    int t;<br>    cin&gt;&gt;t;<br>    while(t–)<br>    {<br>        memset(a,0,sizeof(a));<br>        int n,flag&#x3D;0;<br>        cin&gt;&gt;n;<br>        if(n&lt;&#x3D;3)<br>        {<br>            cout&lt;&lt;1;<br>            for(int i&#x3D;2;i&lt;&#x3D;n;i++)<br>                cout&lt;&lt;’ ‘&lt;&lt;i;<br>            cout&lt;&lt;endl;<br>            continue;<br>        }<br>        for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>            a[i]&#x3D;1;<br>        while(re(n)&gt;3)<br>        {<br>            if(flag&#x3D;&#x3D;0)<br>            {<br>                int flag2&#x3D;0;<br>                for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>                {<br>                    if(a[i-1]&#x3D;&#x3D;1 &amp;&amp; a[i]&#x3D;&#x3D;1)<br>                    {<br>                        a[i]&#x3D;0;<br>                        flag2&#x3D;0;<br>                    }<br>                    else if(a[i-1]&#x3D;&#x3D;0 &amp;&amp; a[i]&#x3D;&#x3D;1 &amp;&amp; flag2&#x3D;&#x3D;1)<br>                    {<br>                        a[i]&#x3D;0;<br>                        flag2&#x3D;0;<br>                    }<br>                    else if(a[i-1]&#x3D;&#x3D;0 &amp;&amp; a[i]&#x3D;&#x3D;1 &amp;&amp; flag2&#x3D;&#x3D;0)<br>                        flag2&#x3D;1;<br>                }<br>                flag&#x3D;1;<br>            }<br>            else<br>            {<br>                int flag2&#x3D;0;<br>                for(int i&#x3D;1;i&lt;&#x3D;n;i++)<br>                {<br>                    if(a[i-1]&#x3D;&#x3D;0 &amp;&amp; a[i]&#x3D;&#x3D;1 &amp;&amp; flag2&#x3D;&#x3D;2)<br>                    {<br>                        a[i]&#x3D;0;<br>                        flag2&#x3D;0;<br>                    }<br>                    else if(a[i-1]&#x3D;&#x3D;0 &amp;&amp; a[i]&#x3D;&#x3D;1 &amp;&amp; flag2&#x3D;&#x3D;0)<br>                        flag2&#x3D;1;<br>                    else if(a[i-1]&#x3D;&#x3D;0 &amp;&amp; a[i]&#x3D;&#x3D;1 &amp;&amp; flag2&#x3D;&#x3D;1)<br>                        flag2&#x3D;2;<br>                }<br>                flag&#x3D;0;<br>            }<br>        }<br>        cout&lt;&lt;1;<br>        for(int i&#x3D;2;i&lt;&#x3D;n;i++)<br>        {<br>            if(a[i]&#x3D;&#x3D;1)<br>                cout&lt;&lt;’ ‘&lt;&lt;i;<br>        }<br>        cout&lt;&lt;endl;<br>    }<br>    return 0;<br>}<br></pre><br><br><br></p>
+<p></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">lstkpeter</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://lstkpeter.github.io/2017/01/14/hdu%201276%20%E5%A3%AB%E5%85%B5%E9%98%9F%E5%88%97%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%EF%BC%88%E6%B0%B4%E9%A2%98%EF%BC%89/">https://lstkpeter.github.io/2017/01/14/hdu%201276%20%E5%A3%AB%E5%85%B5%E9%98%9F%E5%88%97%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%EF%BC%88%E6%B0%B4%E9%A2%98%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lstkpeter.github.io" target="_blank">lstkpeter</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/02/15/hdu1023%20Train%20Problem%20II%20%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">hdu1023 Train Problem II 卡特兰数</div></div></a></div><div class="next-post pull-right"><a href="/2017/01/06/%E4%BD%BF%E7%94%A8SoftEther%E5%88%A9%E7%94%A8vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%EF%BC%88ipv6%E5%8F%AF%E7%94%A8%EF%BC%89/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用SoftEther利用vps服务器搭建（ipv6可用）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/2BingWallpapers (12).5kkdqdezd7g0.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lstkpeter</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lstkpeter"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lstkpeter" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lstkpeter@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">---</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">
+士兵队列训练问题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="排序复习"/></a><div class="content"><a class="title" href="/2021/08/18/%E6%8E%92%E5%BA%8F%E5%A4%8D%E4%B9%A0/" title="排序复习">排序复习</a><time datetime="2021-08-18T02:53:25.000Z" title="发表于 2021-08-18 10:53:25">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda"/></a><div class="content"><a class="title" href="/2019/12/16/%E4%BB%A5titan%20rtx%E4%B8%BA%E4%BE%8B%20%E5%9C%A8ubuntu%20server%E4%B8%8A%E9%83%A8%E7%BD%B2cuda+cudnn+anaconda/" title="以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda">以titan rtx为例 在ubuntu server上部署cuda+cudnn+anaconda</a><time datetime="2019-12-16T11:10:48.000Z" title="发表于 2019-12-16 19:10:48">2019-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决递归函数需要返回值时的蛋疼问题"/></a><div class="content"><a class="title" href="/2019/10/22/%E8%A7%A3%E5%86%B3%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E9%9C%80%E8%A6%81%E8%BF%94%E5%9B%9E%E5%80%BC%E6%97%B6%E7%9A%84%E8%9B%8B%E7%96%BC%E9%97%AE%E9%A2%98/" title="解决递归函数需要返回值时的蛋疼问题">解决递归函数需要返回值时的蛋疼问题</a><time datetime="2019-10-22T10:47:55.000Z" title="发表于 2019-10-22 18:47:55">2019-10-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="POJ 1556 (toj 1952)The Doors"/></a><div class="content"><a class="title" href="/2019/07/30/POJ%201556%20(toj%201952)The%20Doors/" title="POJ 1556 (toj 1952)The Doors">POJ 1556 (toj 1952)The Doors</a><time datetime="2019-07-30T07:58:38.000Z" title="发表于 2019-07-30 15:58:38">2019-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog"><img src="https://cdn.jsdelivr.net/gh/lstkpeter/image-hosting@master/global/xxx.2iejolw2awq0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 多校3  Fansblog"/></a><div class="content"><a class="title" href="/2019/07/30/2019%20%E5%A4%9A%E6%A0%A13%20%20Fansblog/" title="2019 多校3  Fansblog">2019 多校3  Fansblog</a><time datetime="2019-07-30T07:56:47.000Z" title="发表于 2019-07-30 15:56:47">2019-07-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By lstkpeter</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
